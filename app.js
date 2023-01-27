@@ -3,6 +3,7 @@ const cors = require("cors");
 const config = require("./config");
 const jwt = require("jsonwebtoken");
 const bodyparser = require("body-parser");
+const PORT = process.env.PORT || 5000;
 
 const loginRoute = require("./routes/loginRoutes");
 // const dashboardRoute = require("./routes/dashboard");
@@ -40,4 +41,4 @@ app.use("/property", async (req, res, next) => {
 app.use("/property", propertyRoute);
 
 // in the routes we have user.js and login routes are definedthere
-app.listen(5000, () => console.log("Server is up at 5000"));
+app.listen(PORT, () => console.log("Server is up at 5000"));
