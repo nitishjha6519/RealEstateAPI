@@ -7,3 +7,5 @@
 ### 3.set the bearer token in authorization
 
 ### url : https://estatelists1.onrender.com/property/propertydetails
+
+### when running in localhost, set the blank fields in .env file
