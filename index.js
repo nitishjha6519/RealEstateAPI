@@ -25,4 +25,4 @@ mongoose.connect(
   }
 );
 
-app.listen(PORT, () => console.log("Server is up at 5000"));
+app.listen(PORT, () => console.log("Server is up at 3000"));

@@ -44,8 +44,10 @@ router.post("/new", async (req, res) => {
 router.get("/propertydetails", async (req, res) => {
   try {
     console.log(req.id);
-    let allData = await propertyModel.find({ user: req.id });
-    console.log(allData);
+
+    //populate is used to fetch user property details from login model, as user is ref to "login"
+    let allData = await propertyModel.find({ user: req.id }).populate("user");
+    //console.log(allData);
     res.json({
       status: "success",
       allData,

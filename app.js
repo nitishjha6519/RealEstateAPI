@@ -8,7 +8,7 @@ const loginRoute = require("./routes/loginRoutes");
 // const dashboardRoute = require("./routes/dashboard");
 const propertyRoute = require("./routes/property");
 
-const secret = process.env.secret;
+const secret = "MongoTest";
 const app = express();
 // middlewares
 app.use(cors());

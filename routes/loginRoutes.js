@@ -1,6 +1,8 @@
 const express = require("express");
 const userCollection = require("../models/signup");
 const bcrypt = require("bcrypt");
+const dotenv = require("dotenv");
+dotenv.config();
 const jwt = require("jsonwebtoken");
 const { body, validationResult } = require("express-validator");
 const Router = express.Router();
@@ -29,7 +31,7 @@ Router.post(
   "/register",
   body("email").isEmail(),
   body("password").isLength({
-    min: 6,
+    min: 1,
     max: 16,
   }),
   async (req, res) => {
@@ -88,7 +90,7 @@ Router.post(
 
 Router.post("/login", async (req, res) => {
   // 1. Check whether user already exists or not
-  const { username, password } = req.body;
+  const { email, password } = req.body;
   console.log("email " + req.body.email);
 
   if (req.body.email === "" || req.body.password === "") {
