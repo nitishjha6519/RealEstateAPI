@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "4931edea-20a9-44ad-b8f0-6a1e27e2b4fa",
+		"name": "Real Estate",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24748443"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n \"email\": \"sample1@mail.com\",\r\n \"password\": \"123456\"\r\n   \r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://estatelists1.onrender.com/register",
+					"protocol": "https",
+					"host": [
+						"estatelists1",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n \"email\": \"sample1@mail.com\",\r\n \"password\": \"123456\"\r\n   \r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://estatelists1.onrender.com/login",
+					"protocol": "https",
+					"host": [
+						"estatelists1",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add new property",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Nzg1Mzc1NjUsImRhdGEiOiI2NDBjNjU0NGJkYTA2MDJhNmEyZjkxMGQiLCJpYXQiOjE2Nzg1MzM5NjV9.ESZc-K_XQ1Kpmf59t8HX-loKOYy0aCOxznv3AM9m9G4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"propertytype\": \"Plot\",\r\n  \"negotable\":\"Yes\",\r\n  \"price\": 5524,\r\n  \"ownership\": \"String\",\r\n  \"propertyage\": 645,\r\n  \"propertyapproved\":\"Yes\",\r\n  \"propertydescription\": \"String\",\r\n  \"bankloan\":\"Yes\",\r\n  \"name\": \"String\",\r\n  \"mobile\": 756,\r\n  \"postedby\": \"sample something\",\r\n  \"saletype\": \"sample something\",\r\n  \"featuredpackage\": \"sample something\",\r\n  \"ppdpackage\": \"sample something\",\r\n  \"email\": \"sample something\",\r\n  \"city\": \"sample something\",\r\n  \"area\": \"sample something\",\r\n  \"pincode\": 756,\r\n  \"address\": \"sample something\",\r\n  \"landmark\": \"sample something\",\r\n  \"latitude\": 756,\r\n  \"longitude\": 756,\r\n  \"length\": 756,\r\n  \"breath\": 756,\r\n  \"totalarea\": 756,\r\n  \"areaunit\": \"sample something\",\r\n  \"bhk\": 1,\r\n  \"floors\": 5,\r\n  \"attached\": \"String\",\r\n  \"westerntoilet\": \"Yes\",\r\n  \"furnished\": \"Semi-Furnished\",\r\n  \"carparking\": \"Yes\",\r\n  \"lift\":\"Yes\",\r\n  \"electricity\": \"String\",\r\n  \"facing\": \"String\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://estatelists1.onrender.com/property/new",
+					"protocol": "https",
+					"host": [
+						"estatelists1",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"property",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "property details",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Nzg1Mzc1NjUsImRhdGEiOiI2NDBjNjU0NGJkYTA2MDJhNmEyZjkxMGQiLCJpYXQiOjE2Nzg1MzM5NjV9.ESZc-K_XQ1Kpmf59t8HX-loKOYy0aCOxznv3AM9m9G4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://estatelists1.onrender.com/property/propertydetails",
+					"protocol": "https",
+					"host": [
+						"estatelists1",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"property",
+						"propertydetails"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
