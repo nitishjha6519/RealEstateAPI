@@ -31,7 +31,7 @@ Router.post(
   "/register",
   body("email").isEmail(),
   body("password").isLength({
-    min: 1,
+    min: 6,
     max: 16,
   }),
   async (req, res) => {
