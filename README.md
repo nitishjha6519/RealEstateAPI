@@ -8,4 +8,8 @@
 
 ### url : https://estatelists1.onrender.com/property/propertydetails
 
+### https://dazzling-pika-d6e6ed.netlify.app/
+
 ### when running in localhost, set the blank fields in .env file
+
+
